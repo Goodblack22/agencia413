@@ -531,6 +531,44 @@
   /* CASES */
   #cases { background: var(--black); }
   .cases-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 24px; }
+
+  /* CLIENTS STRIP */
+  .clients-strip {
+    overflow: hidden;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    padding: 20px 0;
+    margin-bottom: 0;
+  }
+  .clients-track {
+    display: flex; gap: 0;
+    animation: marquee 30s linear infinite;
+    width: max-content;
+  }
+  .clients-strip:hover .clients-track { animation-play-state: paused; }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .client-logo-item {
+    display: flex; flex-direction: column;
+    padding: 0 40px;
+    border-right: 1px solid var(--gray);
+    white-space: nowrap;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    color: var(--light);
+    transition: color 0.3s;
+    cursor: default;
+  }
+  .client-logo-item:hover { color: var(--orange); }
+  .client-logo-item span {
+    font-size: 11px; font-weight: 400;
+    letter-spacing: 1px; color: var(--muted);
+    text-transform: none; margin-top: 2px;
+  }
+
   .cases-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
     background: var(--gray2);
@@ -1055,69 +1093,33 @@
   <div class="cases-header">
     <div class="reveal">
       <div class="section-tag">Portfólio</div>
-      <h2 class="section-title">Resultados reais,<br>empresas reais</h2>
+      <h2 class="section-title">Quem já confia<br>na Agência 413</h2>
     </div>
-    <p class="section-subtitle reveal" style="transition-delay:0.2s">Cases de clientes que apostaram no digital e viram sua empresa crescer.</p>
+    <p class="section-subtitle reveal" style="transition-delay:0.2s">Empresas e profissionais que cresceram no digital com a nossa estratégia.</p>
   </div>
-  <div class="cases-grid reveal" style="transition-delay:0.2s">
-    <div class="case-card">
-      <div class="case-badge">Destaque</div>
-      <div class="case-bg">
-        <div class="case-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          <p>Seu case aqui</p>
-        </div>
-      </div>
-      <div class="case-overlay">
-        <div class="case-tag">Saúde & Estética</div>
-        <div class="case-name">Clínica Exemplo</div>
-        <div class="case-metric">+420% de alcance orgânico em 60 dias</div>
-      </div>
-      <div class="case-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-    </div>
-    <div class="case-card">
-      <div class="case-bg">
-        <div class="case-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <p>Vídeo case</p>
-        </div>
-      </div>
-      <div class="case-overlay">
-        <div class="case-tag">Jurídico</div>
-        <div class="case-name">Advocacia Parceiro</div>
-        <div class="case-metric">3x mais consultas geradas via Instagram</div>
-      </div>
-      <div class="case-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-    </div>
-    <div class="case-card">
-      <div class="case-bg">
-        <div class="case-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-          <p>Antes & Depois</p>
-        </div>
-      </div>
-      <div class="case-overlay">
-        <div class="case-tag">Gastronomia</div>
-        <div class="case-name">Restaurante Local</div>
-        <div class="case-metric">2.800 seguidores em 45 dias</div>
-      </div>
-      <div class="case-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
-    </div>
-    <div class="case-card">
-      <div class="case-bg">
-        <div class="case-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-          <p>Métricas</p>
-        </div>
-      </div>
-      <div class="case-overlay">
-        <div class="case-tag">Imobiliário</div>
-        <div class="case-name">Imobiliária Parceira</div>
-        <div class="case-metric">R$180k em imóveis vendidos via ads</div>
-      </div>
-      <div class="case-add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div>
+
+  <!-- LOGOS CLIENTES -->
+  <div class="clients-strip reveal" style="transition-delay:0.1s">
+    <div class="clients-track">
+      <div class="client-logo-item">@drapatriciasantiago<span>121 mil seguidores</span></div>
+      <div class="client-logo-item">@basycbr<span>223 mil seguidores</span></div>
+      <div class="client-logo-item">@armazemdedoces<span>125 mil seguidores</span></div>
+      <div class="client-logo-item">@burgerdarua<span>46 mil seguidores</span></div>
+      <div class="client-logo-item">@diogo.montalvao<span>42,4 mil seguidores</span></div>
+      <div class="client-logo-item">@pacco.pet<span>48,6 mil seguidores</span></div>
+      <div class="client-logo-item">@luizamlucena<span>11,2 mil seguidores</span></div>
+      <div class="client-logo-item">@drgustavorodrigues<span>3,8 mil seguidores</span></div>
+      <div class="client-logo-item">@x5med<span>1,9 mil seguidores</span></div>
+      <!-- duplicate for infinite scroll -->
+      <div class="client-logo-item">@drapatriciasantiago<span>121 mil seguidores</span></div>
+      <div class="client-logo-item">@basycbr<span>223 mil seguidores</span></div>
+      <div class="client-logo-item">@armazemdedoces<span>125 mil seguidores</span></div>
+      <div class="client-logo-item">@burgerdarua<span>46 mil seguidores</span></div>
+      <div class="client-logo-item">@diogo.montalvao<span>42,4 mil seguidores</span></div>
+      <div class="client-logo-item">@pacco.pet<span>48,6 mil seguidores</span></div>
     </div>
   </div>
+
 </section>
 
 <!-- DEPOIMENTOS -->
