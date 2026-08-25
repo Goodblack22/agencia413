@@ -551,7 +551,7 @@
     100% { transform: translateX(-50%); }
   }
   .client-logo-item {
-    display: flex; flex-direction: column;
+    display: flex; align-items: center; gap: 14px;
     padding: 0 40px;
     border-right: 1px solid var(--gray);
     white-space: nowrap;
@@ -563,6 +563,13 @@
     cursor: default;
   }
   .client-logo-item:hover { color: var(--orange); }
+  .client-avatar {
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .client-info { display: flex; flex-direction: column; }
   .client-logo-item span {
     font-size: 11px; font-weight: 400;
     letter-spacing: 1px; color: var(--muted);
@@ -1101,22 +1108,25 @@
   <!-- LOGOS CLIENTES -->
   <div class="clients-strip reveal" style="transition-delay:0.1s">
     <div class="clients-track">
-      <div class="client-logo-item">@drapatriciasantiago<span>121 mil seguidores</span></div>
-      <div class="client-logo-item">@basycbr<span>223 mil seguidores</span></div>
-      <div class="client-logo-item">@armazemdedoces<span>125 mil seguidores</span></div>
-      <div class="client-logo-item">@burgerdarua<span>46 mil seguidores</span></div>
-      <div class="client-logo-item">@diogo.montalvao<span>42,4 mil seguidores</span></div>
-      <div class="client-logo-item">@pacco.pet<span>48,6 mil seguidores</span></div>
-      <div class="client-logo-item">@luizamlucena<span>11,2 mil seguidores</span></div>
-      <div class="client-logo-item">@drgustavorodrigues<span>3,8 mil seguidores</span></div>
-      <div class="client-logo-item">@x5med<span>1,9 mil seguidores</span></div>
+      <div class="client-logo-item"><img src="logos/drapatriciasantiago.png" alt="@drapatriciasantiago" class="client-avatar"><div class="client-info">@drapatriciasantiago<span>121 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/basycbr.png" alt="@basycbr" class="client-avatar"><div class="client-info">@basycbr<span>223 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/armazemdedoces.png" alt="@armazemdedoces" class="client-avatar"><div class="client-info">@armazemdedoces<span>125 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/burgerdarua.png" alt="@burgerdarua" class="client-avatar"><div class="client-info">@burgerdarua<span>46 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/diogo.montalvao.png" alt="@diogo.montalvao" class="client-avatar"><div class="client-info">@diogo.montalvao<span>42,4 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/pacco.pet.png" alt="@pacco.pet" class="client-avatar"><div class="client-info">@pacco.pet<span>48,6 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/luizamlucena.png" alt="@luizamlucena" class="client-avatar"><div class="client-info">@luizamlucena<span>11,2 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/drgustavorodrigues.png" alt="@drgustavorodrigues" class="client-avatar"><div class="client-info">@drgustavorodrigues<span>3,8 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/x5med.png" alt="@x5med" class="client-avatar"><div class="client-info">@x5med<span>1,9 mil seguidores</span></div></div>
       <!-- duplicate for infinite scroll -->
-      <div class="client-logo-item">@drapatriciasantiago<span>121 mil seguidores</span></div>
-      <div class="client-logo-item">@basycbr<span>223 mil seguidores</span></div>
-      <div class="client-logo-item">@armazemdedoces<span>125 mil seguidores</span></div>
-      <div class="client-logo-item">@burgerdarua<span>46 mil seguidores</span></div>
-      <div class="client-logo-item">@diogo.montalvao<span>42,4 mil seguidores</span></div>
-      <div class="client-logo-item">@pacco.pet<span>48,6 mil seguidores</span></div>
+      <div class="client-logo-item"><img src="logos/drapatriciasantiago.png" alt="@drapatriciasantiago" class="client-avatar"><div class="client-info">@drapatriciasantiago<span>121 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/basycbr.png" alt="@basycbr" class="client-avatar"><div class="client-info">@basycbr<span>223 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/armazemdedoces.png" alt="@armazemdedoces" class="client-avatar"><div class="client-info">@armazemdedoces<span>125 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/burgerdarua.png" alt="@burgerdarua" class="client-avatar"><div class="client-info">@burgerdarua<span>46 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/diogo.montalvao.png" alt="@diogo.montalvao" class="client-avatar"><div class="client-info">@diogo.montalvao<span>42,4 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/pacco.pet.png" alt="@pacco.pet" class="client-avatar"><div class="client-info">@pacco.pet<span>48,6 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/luizamlucena.png" alt="@luizamlucena" class="client-avatar"><div class="client-info">@luizamlucena<span>11,2 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/drgustavorodrigues.png" alt="@drgustavorodrigues" class="client-avatar"><div class="client-info">@drgustavorodrigues<span>3,8 mil seguidores</span></div></div>
+      <div class="client-logo-item"><img src="logos/x5med.png" alt="@x5med" class="client-avatar"><div class="client-info">@x5med<span>1,9 mil seguidores</span></div></div>
     </div>
   </div>
 
