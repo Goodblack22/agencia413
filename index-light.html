@@ -27,12 +27,23 @@
     --orange2: #ff7c2a;
     --orange-glow: rgba(255, 98, 0, 0.15);
     --orange-glow2: rgba(255, 98, 0, 0.08);
+    --bg-texture:
+      radial-gradient(circle 260px at 92% -4%, transparent 68%, rgba(255,98,0,0.14) 69%, rgba(255,98,0,0.14) 70%, transparent 71%),
+      radial-gradient(ellipse 50% 40% at 6% 8%, rgba(255,124,42,0.10), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 88% 28%, rgba(255,98,0,0.06), transparent 60%),
+      radial-gradient(ellipse 65% 55% at 45% 105%, rgba(255,180,120,0.10), transparent 60%),
+      var(--bg);
+    --dark-texture:
+      radial-gradient(circle 200px at 4% 100%, transparent 68%, rgba(255,98,0,0.10) 69%, rgba(255,98,0,0.10) 70%, transparent 71%),
+      radial-gradient(ellipse 55% 45% at 90% 6%, rgba(255,124,42,0.08), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 8% 88%, rgba(255,98,0,0.05), transparent 60%),
+      var(--dark);
   }
 
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--bg);
+    background: var(--bg-texture);
     color: var(--text);
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
@@ -330,7 +341,7 @@
   }
 
   /* SERVICES */
-  #services { background: var(--dark); }
+  #services { background: var(--dark-texture); }
   .services-header { margin-bottom: 64px; }
   .services-grid {
     display: grid;
@@ -403,7 +414,7 @@
   }
 
   /* HOW IT WORKS */
-  #como-funciona { background: var(--bg); }
+  #como-funciona { background: var(--bg-texture); }
   .steps-container { position: relative; margin-top: 64px; }
   .steps-line {
     position: absolute; top: 28px; left: 28px; right: 28px; height: 1px;
@@ -468,7 +479,7 @@
   .step-desc { font-size: 15px; color: var(--muted); font-weight: 300; }
 
   /* DIFERENCIAIS */
-  #diferenciais { background: var(--dark); overflow: hidden; }
+  #diferenciais { background: var(--dark-texture); overflow: hidden; }
   .diferenciais-layout {
     display: grid; grid-template-columns: 1fr 1fr;
     gap: 80px; align-items: center; margin-top: 64px;
@@ -531,7 +542,7 @@
   .diff-card-desc { font-size: 13px; color: var(--muted); font-weight: 300; position: relative; z-index: 1; }
 
   /* CASES */
-  #cases { background: var(--bg); }
+  #cases { background: var(--bg-texture); }
   .cases-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 24px; }
 
   /* CLIENTS STRIP */
@@ -644,7 +655,7 @@
   }
 
   /* DEPOIMENTOS */
-  #depoimentos { background: var(--dark); }
+  #depoimentos { background: var(--dark-texture); }
   .testimonials-track { margin-top: 64px; position: relative; overflow: hidden; }
   .testimonials-slider { display: flex; gap: 24px; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
   .testimonial-card {
@@ -712,7 +723,7 @@
 
   /* CTA FINAL */
   #cta-final {
-    background: var(--bg);
+    background: var(--bg-texture);
     padding: 120px 5%;
     text-align: center;
     position: relative; overflow: hidden;
@@ -763,7 +774,7 @@
 
   /* FOOTER */
   footer {
-    background: var(--dark);
+    background: var(--dark-texture);
     border-top: 1px solid var(--gray);
     padding: 60px 5% 40px;
   }
